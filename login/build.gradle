@@ -1,0 +1,23 @@
+plugins {
+    id("net.minecrell.plugin-yml.bukkit") version "0.5.1"
+}
+
+archivesBaseName = 'server-login'
+
+bukkit {
+    name = "Login"
+    main = "br.com.pentamc.login.LoginMain"
+    version = "dev"
+    author = "gabriaum"
+    softDepend = ["Common"]
+}
+
+dependencies {
+    def local = 'C://API/'
+
+    compileOnly(
+            files(local + 'pandaspigot-server-1.8.8-R0.1-SNAPSHOT.jar'),
+            project(':common-core'),
+            project(':common-bukkit')
+    )
+}

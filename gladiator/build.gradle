@@ -1,0 +1,23 @@
+plugins {
+    id("net.minecrell.plugin-yml.bukkit") version "0.5.1"
+}
+
+archivesBaseName = 'game-gladiator'
+
+bukkit {
+    name = "Game"
+    main = "br.com.pentamc.gladiator.GameMain"
+    version = "dev"
+    author = "gabriaum"
+    softDepend = ["Common"]
+}
+
+dependencies {
+    def local = 'C://API/'
+
+    compileOnly(
+            files(local + 'pintospigot.jar', local + 'ProtocolLib.jar'),
+            project(':common-core'),
+            project(':common-bukkit')
+    )
+}

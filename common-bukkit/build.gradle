@@ -1,0 +1,50 @@
+plugins {
+    id("net.minecrell.plugin-yml.bukkit") version "0.5.1"
+}
+
+archivesBaseName = 'common-bukkit'
+
+bukkit {
+    name = "Common"
+    main = "br.com.pentamc.bukkit.BukkitMain"
+    version = "dev"
+    author = "gabriaum"
+    depend = ["ProtocolLib"]
+}
+
+repositories {
+    maven {
+        name 'aikar'
+        url 'https://repo.aikar.co/content/groups/aikar/'
+    }
+}
+
+dependencies {
+    def local = 'C://API/'
+
+    compileOnly(
+            files(
+                    local + 'pintospigot.jar',
+                    local + 'ProtocolLib.jar'
+            )
+    )
+
+    implementation(
+            project(':common-core'),
+            'org.mongodb:mongodb-driver:3.12.4',
+            'redis.clients:jedis:2.9.0',
+            'org.apache.httpcomponents:httpmime:4.5.12',
+            'org.apache.httpcomponents:httpasyncclient:4.1.4',
+            'co.aikar:acf-bukkit:0.5.0-SNAPSHOT'
+    )
+}
+
+jar {
+    duplicatesStrategy(DuplicatesStrategy.EXCLUDE)
+
+    from {
+        configurations.compileClasspath.collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
+}

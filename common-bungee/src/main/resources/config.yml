@@ -1,0 +1,52 @@
+competitive:
+  week:
+    14-00:
+      type: 'solo'
+      skit: '1'
+    16-30:
+      type: 'dupla'
+      skit: '2'
+    19-00:
+      type: 'solo'
+      skit: '2'
+    21-30:
+      type: 'dupla'
+      skit: '1'
+  saturday:
+    14-00:
+      type: 'solo'
+      skit: '0'
+    16-30:
+      type: 'dupla'
+      skit: '1'
+    19-00:
+      type: 'solo'
+      skit: '2'
+    21-30:
+      type: 'panela'
+      skit: '2'
+  sunday:
+    14-00:
+      type: 'solo'
+      skit: '2'
+    16-30:
+      type: 'dupla'
+      skit: '1'
+    19-00:
+      type: 'solo'
+      skit: '2'
+    21-30:
+      type: 'panela'
+      skit: '2'
+
+serverAddress: '0.0.0.0'
+
+mongodb:
+  hostname: '127.0.0.1'
+  username: ''
+  database: 'pentamc'
+  password: ''
+
+redis:
+  hostname: '127.0.0.1'
+  username: ''

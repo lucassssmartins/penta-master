@@ -1,0 +1,25 @@
+repositories {
+    maven {
+        name 'aikar'
+        url 'https://repo.aikar.co/content/groups/aikar/'
+    }
+}
+
+dependencies {
+    def local = 'C://API/'
+
+    compileOnly(
+            files(
+                    local + 'pandaspigot-server-1.8.8-R0.1-SNAPSHOT.jar',
+                    local + 'Zartema.jar'
+            )
+    )
+
+    implementation(
+            'org.mongodb:mongodb-driver:3.12.4',
+            'redis.clients:jedis:2.9.0',
+            'org.apache.httpcomponents:httpmime:4.5.12',
+            'org.apache.httpcomponents:httpasyncclient:4.1.4',
+            'co.aikar:acf-bukkit:0.5.0-SNAPSHOT'
+    )
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/arcade-duels" />
+            <option value="$PROJECT_DIR$/common-bukkit" />
+            <option value="$PROJECT_DIR$/common-bungee" />
+            <option value="$PROJECT_DIR$/common-core" />
+            <option value="$PROJECT_DIR$/competitive" />
+            <option value="$PROJECT_DIR$/competitive/lib" />
+            <option value="$PROJECT_DIR$/gladiator" />
+            <option value="$PROJECT_DIR$/lobby-competitive" />
+            <option value="$PROJECT_DIR$/lobby-duels" />
+            <option value="$PROJECT_DIR$/lobby-general" />
+            <option value="$PROJECT_DIR$/lobby-normal" />
+            <option value="$PROJECT_DIR$/lobby-pvp" />
+            <option value="$PROJECT_DIR$/login" />
+            <option value="$PROJECT_DIR$/pvp" />
+            <option value="$PROJECT_DIR$/shadow" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

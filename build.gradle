@@ -1,0 +1,26 @@
+allprojects {
+    apply plugin: 'java'
+
+    afterEvaluate {
+        group = 'br.com.pentamc'
+        version = 'dev'
+
+        compileJava.options.encoding('UTF-8')
+
+        java {
+            sourceCompatibility = JavaVersion.VERSION_1_8
+            targetCompatibility = JavaVersion.VERSION_1_8
+        }
+
+        repositories {
+            mavenCentral()
+        }
+
+        dependencies {
+            def lombok = 'org.projectlombok:lombok:1.18.28'
+
+            compileOnly(lombok)
+            annotationProcessor(lombok)
+        }
+    }
+}

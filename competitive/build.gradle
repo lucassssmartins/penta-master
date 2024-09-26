@@ -1,0 +1,37 @@
+plugins {
+    id("net.minecrell.plugin-yml.bukkit") version "0.5.1"
+}
+
+archivesBaseName = 'game-competitive'
+compileJava.options.encoding('UTF-8')
+
+bukkit {
+    name = "Competitive"
+    main = "br.com.pentamc.competitive.GameMain"
+    load = "POSTWORLD"
+    version = "dev"
+    author = "gabriaum"
+    softDepend = ["Common"]
+}
+
+dependencies {
+    def local = 'C://API/'
+
+    compileOnly(
+            files(local + 'pintospigot.jar'),
+            files('./lib/worldedit.jar'),
+            files('./lib/fawe.jar'),
+            project(':common-core'),
+            project(':common-bukkit')
+    )
+
+    implementation('redis.clients:jedis:2.9.0')
+}
+
+jar {
+    from {
+        configurations.runtimeClasspath.collect({
+            it.isDirectory() ? it : zipTree(it)
+        })
+    }
+}

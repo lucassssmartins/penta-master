@@ -1,0 +1,84 @@
+redis:
+  hostname: 127.0.0.1
+  username: ''
+evento:
+  solo:
+    force: chat off; clearchat; var team-hg-enabled false; tempo stop; tempo 240; var announce-time false
+    commands:
+      - autocommand pregame 35 clearchat; say Sejam bem-vindos ao &eCOMP&f!
+      - autocommand pregame 32 say Todos irão iniciar a partida com um &ekit de itens&f.
+      - autocommand pregame 29 say O torneio será &eSOLO&f, ou seja, duplas e panelas serão &cdesclassificadas&f.
+      - autocommand pregame 25 say É proibido fazer &espawn trap&f.
+      - autocommand pregame 22 say Aos &e30 minutos de jogo&f, vocês serão puxados para uma arena com baldes e builds &cdesativados&f.
+      - autocommand pregame 19 say Boa sorte a todos!; say Começaremos em instantes.; tempo 15
+      - autocommand gametime 1500 say A arena nascerá aos 30 minutos.
+      - autocommand gametime 1800 togglebuild; spawnarena arena; say Nova arena gerada, uma nova nascerá aos 35 minutos.
+      - autocommand gametime 2100 spawnarena arena; say Nova arena gerada, uma nova nascerá aos 40 minutos.
+      - autocommand gametime 2400 spawnarena arena; say Nova arena gerada, uma nova nascerá aos 45 minutos.
+      - autocommand gametime 2700 spawnarena arena; say Nova arena gerada, uma nova nascerá aos 50 minutos.
+      - autocommand gametime 3000 spawnarena arena-final; say Nova arena gerada, uma nova nascerá aos 55 minutos.
+      - autocommand gametime 3300 spawnarena arena-final; say Nova arena gerada, uma nova nascerá aos 60 minutos.
+      - autocommand gametime 3600 spawnarena arena-final; say Nova arena gerada, uma nova nascerá aos 65 minutos.
+      - autocommand gametime 3900 spawnarena arena-final; say Nova arena gerada, uma nova nascerá aos 70 minutos.
+      - autocommand gametime 4200 spawnarena arena-final; say A última arena foi gerada!
+  dupla:
+    force: chat off; clearchat; tempo stop; tempo 240; var announce-time false
+    commands:
+      - autocommand pregame 35 clearchat; say Sejam bem-vindos ao &eCOMP&f!
+      - autocommand pregame 32 say Todos irão iniciar a partida com um &ekit de itens&f.
+      - autocommand pregame 29 say O torneio será &eDUPLA&f, ou seja, panelas serão &cdesclassificadas&f.
+      - autocommand pregame 25 say É proibido fazer &espawn trap&f.
+      - autocommand pregame 22 say Aos &e30 minutos de jogo&f, vocês serão puxados para uma arena com baldes e builds &cdesativados&f.
+      - autocommand pregame 19 say Boa sorte a todos!; say Começaremos em instantes.; tempo 15
+      - autocommand gametime 1500 say A arena nascerá aos 30 minutos.
+      - autocommand gametime 1800 togglebuild; spawnarena arena; say Nova arena gerada, uma nova nascerá aos 35 minutos.
+      - autocommand gametime 2100 spawnarena arena; say Nova arena gerada, uma nova nascerá aos 40 minutos.
+      - autocommand gametime 2400 spawnarena arena-final; say Nova arena gerada, uma nova nascerá aos 45 minutos.
+      - autocommand gametime 2700 spawnarena arena-final; say Nova arena gerada, uma nova nascerá aos 50 minutos.
+      - autocommand gametime 3000 spawnarena arena-wither; say Nova arena gerada, uma nova nascerá aos 55 minutos.
+      - autocommand gametime 3300 spawnarena arena-wither; say Nova arena gerada, uma nova nascerá aos 60 minutos.
+      - autocommand gametime 3600 spawnarena arena-wither; say Nova arena gerada, uma nova nascerá aos 65 minutos.
+      - autocommand gametime 3900 spawnarena arena-wither; say Nova arena gerada, uma nova nascerá aos 70 minutos.
+      - autocommand gametime 4200 spawnarena arena-wither; say A última arena foi gerada!
+  panela:
+    force: chat off; clearchat; var team-hg-enabled false; tempo stop; tempo 240; var announce-time false
+    commands:
+      - autocommand pregame 35 clearchat; say Sejam bem-vindos ao &eCOMP&f!
+      - autocommand pregame 32 say Todos irão iniciar a partida com um &ekit de itens&f.
+      - autocommand pregame 29 say O torneio será &ePANELA&f.
+      - autocommand pregame 25 say É proibido fazer &espawn trap&f.
+      - autocommand pregame 22 say Aos &e30 minutos de jogo&f, vocês serão puxados para uma arena com baldes e builds &cdesativados&f.
+      - autocommand pregame 19 say Boa sorte a todos!; say Começaremos em instantes.; tempo 15
+      - autocommand gametime 1500 say A arena nascerá aos 30 minutos.
+      - autocommand gametime 1800 togglebuild; spawnarena arena; say Nova arena gerada, uma nova nascerá aos 35 minutos.
+      - autocommand gametime 2100 spawnarena arena; say Nova arena gerada, uma nova nascerá aos 40 minutos.
+      - autocommand gametime 2400 spawnarena arena; say Nova arena gerada, uma nova nascerá aos 45 minutos.
+      - autocommand gametime 2700 spawnarena arena; say Nova arena gerada, uma nova nascerá aos 50 minutos.
+      - autocommand gametime 3000 spawnarena arena-final; say Nova arena gerada, uma nova nascerá aos 55 minutos.
+      - autocommand gametime 3300 spawnarena arena-final; say Nova arena gerada, uma nova nascerá aos 60 minutos.
+      - autocommand gametime 3600 spawnarena arena-final; say Nova arena gerada, uma nova nascerá aos 65 minutos.
+      - autocommand gametime 3900 spawnarena arena-final; say Nova arena gerada, uma nova nascerá aos 70 minutos.
+      - autocommand gametime 4200 spawnarena arena-final; say A última arena foi gerada!
+var:
+  scoreboard-name: '§b§lCOMP'
+  allow-entry: 'false'
+  mode-team: 'Solo'
+  team-state: 'false'
+  pan-state: 'false'
+  max-server-teams: '-1'
+  max-players-per-team: '2'
+  announce-time: 'true'
+  invincibility-start-time: '120'
+  minifeast-enabled: 'true'
+  feast-enabled: 'true'
+  feast-time: '720'
+  bonus-feast-enabled: 'true'
+  final-battle-time: '45'
+  final-battle-enabled: 'true'
+  force-win-enabled: 'true'
+  force-win-time: '60'
+  feast-time-to-spawn: '300'
+  skit-name: '1'
+skit:
+  '1': '{"kitName":"1","armorContents":{"0":{"type":"IRON_BOOTS"},"1":{"type":"IRON_LEGGINGS"},"2":{"type":"IRON_CHESTPLATE"},"3":{"type":"IRON_HELMET"}},"contents":{"0":{"type":"DIAMOND_SWORD","item-meta":{"enchants":["DAMAGE_ALL:1"]}},"1":{"type":"AIR"},"2":{"type":"AIR"},"3":{"type":"AIR"},"4":{"type":"AIR"},"5":{"type":"AIR"},"6":{"type":"AIR"},"7":{"type":"AIR"},"8":{"type":"COMPASS"},"9":{"type":"IRON_HELMET"},"10":{"type":"IRON_CHESTPLATE"},"11":{"type":"IRON_LEGGINGS"},"12":{"type":"IRON_BOOTS"},"13":{"type":"BOWL","amount":64},"14":{"type":"RED_MUSHROOM","amount":64},"15":{"type":"BROWN_MUSHROOM","amount":64},"16":{"type":"BOWL","amount":64},"17":{"type":"STONE_PICKAXE"},"18":{"type":"IRON_HELMET"},"19":{"type":"IRON_CHESTPLATE"},"20":{"type":"IRON_LEGGINGS"},"21":{"type":"IRON_BOOTS"},"22":{"type":"BOWL","amount":64},"23":{"type":"RED_MUSHROOM","amount":64},"24":{"type":"BROWN_MUSHROOM","amount":64},"25":{"type":"BOWL","amount":64},"26":{"type":"STONE_AXE"},"27":{"type":"DIAMOND_SWORD"},"28":{"type":"AIR"},"29":{"type":"AIR"},"30":{"type":"AIR"},"31":{"type":"AIR"},"32":{"type":"LOG","amount":32},"33":{"type":"LAVA_BUCKET"},"34":{"type":"WATER_BUCKET"},"35":{"type":"LAVA_BUCKET"}}}'
+  '2': '{"kitName":"2","armorContents":{"0":{"type":"IRON_BOOTS"},"1":{"type":"IRON_LEGGINGS"},"2":{"type":"IRON_CHESTPLATE"},"3":{"type":"IRON_HELMET"}},"contents":{"0":{"type":"DIAMOND_SWORD","item-meta":{"enchants":["DAMAGE_ALL:1"]}},"1":{"type":"AIR"},"2":{"type":"AIR"},"3":{"type":"AIR"},"4":{"type":"AIR"},"5":{"type":"AIR"},"6":{"type":"AIR"},"7":{"type":"AIR"},"8":{"type":"COMPASS"},"9":{"type":"IRON_HELMET"},"10":{"type":"IRON_CHESTPLATE"},"11":{"type":"IRON_LEGGINGS"},"12":{"type":"IRON_BOOTS"},"13":{"type":"BOWL","amount":64},"14":{"type":"INK_SACK","data":3,"amount":64},"15":{"type":"INK_SACK","data":3,"amount":64},"16":{"type":"BOWL","amount":64},"17":{"type":"STONE_PICKAXE"},"18":{"type":"IRON_HELMET"},"19":{"type":"IRON_CHESTPLATE"},"20":{"type":"IRON_LEGGINGS"},"21":{"type":"IRON_BOOTS"},"22":{"type":"BOWL","amount":64},"23":{"type":"INK_SACK","data":3,"amount":64},"24":{"type":"INK_SACK","data":3,"amount":64},"25":{"type":"BOWL","amount":64},"26":{"type":"STONE_AXE"},"27":{"type":"DIAMOND_SWORD"},"28":{"type":"AIR"},"29":{"type":"AIR"},"30":{"type":"AIR"},"31":{"type":"AIR"},"32":{"type":"LOG","amount":32},"33":{"type":"LAVA_BUCKET"},"34":{"type":"WATER_BUCKET"},"35":{"type":"LAVA_BUCKET"}}}'

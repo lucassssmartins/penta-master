@@ -1,0 +1,4 @@
+name: Common
+main: br.com.pentamc.bungee.BungeeMain
+version: dev
+author: gabriaum
